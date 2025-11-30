@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Montez&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -10,29 +10,74 @@
 /*========================================================
 MIS ESTILOS
 =========================================================*/
+
+body{
+  background-image: url("../source/disco.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.seccion1 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Cuando aparece */
+.seccion1.activa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ceremonia {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Cuando aparece */
+.ceremonia.activa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .titulo{
   padding: 15px;
   margin: 25px;
 }
 
 .titulo h1{
-  font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
   color: #F69D9D;
   text-align: center;
+  font-size: 45px;
 }
+
 
 .video1{
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  margin-top: -100px;
+}
+
+.video2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .contador{
-  font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   font-size: 50px;
-  font-family: "montez", cursive;
   color: #fff;
 }
 
@@ -41,13 +86,31 @@ MIS ESTILOS
   padding: 80px;
 }
 .divisor1 h1{
-  font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 
 .container2 {
   position: relative;
   overflow: hidden;
+}
+
+.container2 h1{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  text-align: center;
+  color: #d56092;
+}
+
+.container2 h3{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
 }
 
 .container2::before {
@@ -59,7 +122,8 @@ MIS ESTILOS
   height: 100%;
   background-image: url('../source/padres.jpeg');
   background-size: cover;
-  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
   opacity: 0.3;   /* Ajusta la transparencia (0 = transparente, 1 = sólido) */
   z-index: 0;     /* Debajo del contenido */
 }
@@ -67,6 +131,15 @@ MIS ESTILOS
 .container2 > * {
   position: relative;
   z-index: 1;      /* Encima de la capa transparente */
+}
+
+.ceremonia{
+  margin: 0;
+  padding: 100px;
+  background-image: url("../source/ceremonia.jpeg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .ubicacion{
@@ -77,8 +150,22 @@ MIS ESTILOS
 }
 
 .ubicacion h1{
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 40px;
   font-weight: bold;
+  color: #ea77c2;
+}
+
+.ubicacion h2{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ca798d;
 }
 
 .mesa{
@@ -87,25 +174,26 @@ MIS ESTILOS
 
 }
 
-.sobres{
-  
-}
-
 .sobres h2{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-weight: bold;
+  color: #f69d9d;
 }
 
 .sobres p{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: normal;
   font-style: normal;
   font-size: 20px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  color: #000;
 }
 
 .m2{
@@ -116,16 +204,19 @@ MIS ESTILOS
 }
 
 .m2 h2{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-weight: bold;
+  color: #f69d9d;
 }
 
 .boton{
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 65%;
   background-color: #FF1CB8;
   cursor: pointer;
 }
@@ -151,11 +242,16 @@ MIS ESTILOS
   transition: color color 0.3s ease;
 }
 
+.vestimenta{
+  margin: 20px;
+}
+
 .vestimenta h2{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
   display: flex;
   justify-content: center;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 60px;
 }
 
 .vestimenta h3{
@@ -179,6 +275,40 @@ MIS ESTILOS
     text-align: center;
 }
 
+.colores{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.color1{
+  width: 10%;
+  height: 100px;
+  padding: 10px;
+  background-color: #ff50b9;
+  border-radius: 100%;
+  border: 2px solid #222;
+}
+
+.color2{
+  width: 10%;
+  height: 100px;
+  padding: 10px;
+  background-color: #f8ffe6;
+  border-radius: 100%;
+  border: 2px solid #222;
+}
+
+.color1:hover{
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4); 
+  transition: box-shadow 0.3s ease;
+}
+
+.color2:hover{
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4); 
+  transition: box-shadow 0.3s ease;
+}
+
 .redes p{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -198,14 +328,42 @@ MIS ESTILOS
   color: #ff82ff;
 }
 
+.hashtag:hover{
+  text-shadow: 0 5px 15px rgba(255, 130, 255, 0.8);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
 .redes a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
   font-size: 18px;
   text-decoration: none;
-  text-align: center !important;
+}
+
+.redes a:hover{
+  text-shadow: 0 5px 15px rgba(243, 87, 191, 0.8);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  width: 60%;
+  display: ruby-text;
+  background-color: #f69d9d;
+  color: #fff;
 }
 
 /* =======================================================
@@ -1099,12 +1257,12 @@ figure {
 }
 
 #footer {
-  background: #F69D9D;
+  background: #0e1231;
   padding: 60px 0 40px;
 }
 
 #footer p {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 14px;
 }
 
@@ -1117,8 +1275,9 @@ figure {
 }
 
 #footer h2 {
-  color: #fff;
+  color: rgb(254, 247, 103);
   font-size: 60px;
+  text-shadow: 0 5px 15px rgba(255, 239, 95, 0.8);
 }
 
 .btn {
@@ -1463,4 +1622,175 @@ figure {
   height: 100%;
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Fondo */
+  body{
+    background-position: center;
+    background-size: cover;
+  }
+
+  .titulo h1{
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .video1 video,
+  .video2 video{
+    width: 95%;
+    height: auto;
+  }
+
+  .contador{
+    font-size: 35px;
+  }
+
+  .divisor1{
+    padding: 40px;
+  }
+
+  .container2 h1{
+    font-size: 40px;
+  }
+
+  .ceremonia{
+    padding: 40px 20px;
+    background-attachment: scroll; /* Para que no falle en celulares */
+  }
+
+ .mapa {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa iframe {
+  width: 100%;
+  max-width: 600px; /* el tamaño original pero adaptable */
+  height: 350px;
+  border: 0;
+  border-radius: 10px; /* opcional para diseño bonito */
+}
+
+
+  .ubicacion h1{
+    font-size: 30px;
+  }
+
+  .ubicacion h2{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .mesa{
+    padding: 5px;
+  }
+
+  .sobres h2{
+    font-size: 32px;
+  }
+
+  .sobres p{
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .m2 h2{
+    font-size: 32px;
+  }
+
+  .boton{
+    width: 85%;
+    padding: 10px;
+  }
+
+  .boton p{
+    font-size: 18px;
+  }
+
+  .vestimenta h2{
+    font-size: 45px;
+  }
+
+  .vestimenta h3{
+    font-size: 25px;
+    padding: 0 10px;
+  }
+
+  .vestimenta p{
+    font-size: 18px;
+  }
+
+  .colores{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .color1,
+  .color2{
+    width: 20%;
+    height: 80px;
+  }
+
+  .redes a{
+    font-size: 16px;
+  }
+
+  .hashtag{
+    font-size: 28px !important;
+  }
+
+  .btn{
+    width: 80%;
+    font-size: 15px;
+  }
+  
+}
+
+
+/*=============================================
+CELULARES MUY PEQUEÑOS (MENOS DE 480px)
+==============================================*/
+@media screen and (max-width: 480px) {
+
+  .mapa iframe {
+    height: 250px;
+  }
+
+  .titulo h1{
+    font-size: 26px;
+  }
+
+  .contador{
+    font-size: 28px;
+  }
+
+  .container2 h1{
+    font-size: 32px;
+  }
+
+  .color1,
+  .color2{
+    width: 25%;
+    height: 70px;
+  }
+
+  .vestimenta h2{
+    font-size: 35px;
+  }
+
+  .vestimenta h3{
+    font-size: 20px;
+  }
+
+  .boton{
+    width: 60%;
+  }
+
+  .btn{
+    width: 90%;
+    font-size: 12px;
+  }
 }

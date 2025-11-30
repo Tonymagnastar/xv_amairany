@@ -67,18 +67,20 @@
 
 	</head>
 	<body>
+		<audio id="bgm" loop>
+			<source src="source/cancion.mp4" type="audio/mp4	">
+		</audio>
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 	
 		<div class="fh5co-hero" data-section="home">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(source/disco.png);">
 				<div class="display-t">
 					<div class="display-tc">
 						<div class="container">
 							<div class="col-md-10 col-md-offset-1">
 								<div class="animate-box">
-									
 									<h2>XV años de amairany</h2>
 									<p><span>31.01.2026</span></p>
 								</div>
@@ -90,10 +92,10 @@
 		</div>
 
 		<section class="seccion1">
+			<button id="btnMusica">🎵 Música</button>
 			<div class="titulo">
 				<h1>Es un honor poderte invitar a mi fiesta de quince años</h1>
 			</div>
-
 			<div class="video1">
 				<video width="600" height="480" controls autoplay loop>
 					<source src="source/video1.mp4" type="video/mp4">
@@ -147,29 +149,31 @@
 		<div class="divisor1">
 			<h1>“Como una estrella que despierta, así florece mi juventud. Te invito a compartir mi noche de quince años.”</h1>
 		</div>
+		<div class="ceremonia">
+			<div class="ubicacion">
+				<h1>CEREMONIA</h1>
+				<h2>Salón de eventos "Jardín San Gabriel"</h2>
+				<h2>Horario: 4:00 p.m</h2>
 
-		<div class="ubicacion">
-			<h1>Ubicación</h1>
-			<h2>Salón de eventos "Jardín San Gabriel"</h2>
-
-			<div class="mapa">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d394.8790984221628!2d-98.98741617747403!3d19.680912837286062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ed0bbde05a61%3A0x7abaa0942ba1b030!2sSalon%20De%20Eventos%20Jard%C3%ADn%20San%20Gabriel!5e0!3m2!1ses-419!2smx!4v1763920315222!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<div class="mapa">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d394.8790984221628!2d-98.98741617747403!3d19.680912837286062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ed0bbde05a61%3A0x7abaa0942ba1b030!2sSalon%20De%20Eventos%20Jard%C3%ADn%20San%20Gabriel!5e0!3m2!1ses-419!2smx!4v1763920315222!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 			</div>
-		</div>
 
-		<div class="mesa">
-			<div class="sobres">
-				<h2>Lluvia de sobres</h2>
-					<p>En la entrada encontrarás una cajita,<br>
-					podras tomar un sobre y poner la cantidad<br>
-					que tu desees, gracias por ayudarme a<br>
-					escoger mi regalo.
-					</p>
-			</div>
-			<div class="m2">
-				<h2>Mesa de regalo</h2>
-				<div class="boton" onclick="window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51861147', '_blank')">
-					<p>Liverpool</p>
+			<div class="mesa">
+				<div class="sobres">
+					<h2>Lluvia de sobres</h2>
+						<p>En la entrada encontrarás una cajita,<br>
+						podrás tomar un sobre y poner la cantidad<br>
+						que tu desees, gracias por ayudarme a<br>
+						escoger mi regalo.
+						</p>
+				</div>
+				<div class="m2">
+					<h2>Mesa de regalo</h2>
+					<div class="boton" onclick="window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51861147', '_blank')">
+						<p>Liverpool</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -177,7 +181,13 @@
 		<div class="vestimenta">
 			<h2>Código de vestimenta</h2><br>
 			<h3>Formal</h3><br>
-			<p>Favor de reservar esos colores y sus<br> variantes para la festejada</p>
+			<p>Favor de reservar esos colores y sus<br> variantes para la festejada</p><br>
+
+			<div class="colores">
+				<div class="color1"></div>
+				<div class="color2"></div>
+			</div>
+			<br>
 		</div>
 
 		<div class="redes">
@@ -197,7 +207,7 @@
 					</div>
 
 				</div>
-				<div class="video1">
+				<div class="video2">
 					<video width="600" height="480" controls autoplay loop>
 						<source src="source/video2.mp4" type="video/mp4">
 					</video>
@@ -205,12 +215,10 @@
 
 				<div class="row animate-box">
 					<div class="col-md-10 col-md-offset-1">
-						
-							<div class="col-md-4 col-sm-4">
-								<a href="https://wa.me/525549422944?text=Confirmo%20mi%20asistencia" class="btn btn-primary btn-block" target="_blank">Confirmar invitación con Amairany</a>
-								<a href="https://wa.me/525636095013?text=Confirmo%20mi%20asistencia" class="btn btn-primary btn-block" target="_blank">Confirmar invitación con Nicky</a>
-							</div>
-						
+						<div class="botones">
+							<a href="https://wa.me/525549422944?text=Confirmo%20mi%20asistencia" class="btn" target="_blank">Confirmar invitación con Amairany</a><br>
+							<a href="https://wa.me/525636095013?text=Confirmo%20mi%20asistencia" class="btn" target="_blank">Confirmar invitación con Nicky</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -243,6 +251,57 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<!-- jQuery -->
 	<script src="dist/scripts.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		const seccion = document.querySelector(".seccion1");
+
+		const observador = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				seccion.classList.add("activa");
+			}
+			});
+		});
+
+		observador.observe(seccion);
+		});
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		const seccion = document.querySelector(".ceremonia");
+
+		const observador = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				seccion.classList.add("activa");
+			}
+			});
+		});
+
+		observador.observe(seccion);
+		});
+	</script>
+
+	<script>
+	const audio = document.getElementById("bgm");
+	const btn = document.getElementById("btnMusica");
+
+	let reproduciendo = false;
+
+	btn.addEventListener("click", () => {
+		if (!reproduciendo) {
+			audio.play();
+			reproduciendo = true;
+			btn.innerText = "🔇 Silenciar";
+		} else {
+			audio.pause();
+			reproduciendo = false;
+			btn.innerText = "🎵 Música";
+		}
+	});
+	</script>
+
 	</body>
 </html>
 
@@ -268,4 +327,5 @@
 
   // Actualizar cada segundo
   setInterval(Actualizar, 1000);
+  
 </script>
