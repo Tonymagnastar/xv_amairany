@@ -305,19 +305,29 @@
     const hoy = new Date();
     const falta = fecha - hoy;
 
+    const contador = document.getElementById("contador");
+
     if (falta <= 0) {
-      document.getElementById("contador").innerHTML = "¡Llegó el día!";
+      contador.innerHTML = "¡Llegó el día!";
       return;
     }
 
-    const dias = Math.ceil(falta / (1000 * 60 * 60 * 24));
+    const dias = Math.floor(falta / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((falta / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((falta / (1000 * 60)) % 60);
+    const segundos = Math.floor((falta / 1000) % 60);
 
-    document.getElementById("contador").innerHTML = `Faltan <br> ${dias} días para el 31 de enero de 2026`;
+    const h = String(horas).padStart(2, "0");
+    const m = String(minutos).padStart(2, "0");
+    const s = String(segundos).padStart(2, "0");
+
+    // Con salto de línea
+    contador.innerHTML = `Faltan:<br>${dias} : ${h} : ${m} : ${s}`;
   }
 
   Actualizar();
-
-  // Actualizar cada segundo
   setInterval(Actualizar, 1000);
-  
 </script>
+
+
+
