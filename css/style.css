@@ -84,12 +84,16 @@ body{
 .divisor1{
   width: 100%;
   padding: 80px;
+  background-image: url(../source/fondo1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .divisor1 h1{
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  
 }
 
 .container2 {
@@ -364,6 +368,15 @@ body{
   display: ruby-text;
   background-color: #f69d9d;
   color: #fff;
+}
+
+.col-md-6.col-md-offset-3.text-center{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =======================================================
@@ -1651,6 +1664,11 @@ figure {
     padding: 40px;
   }
 
+  .divisor1 h1{
+    background-color: rgba(250, 235, 215, 0.5);
+
+  }
+
   .container2 h1{
     font-size: 40px;
   }
@@ -1746,7 +1764,9 @@ figure {
     width: 80%;
     font-size: 15px;
   }
-  
+  .divisor1 {
+    padding: 50px;
+  }
 }
 
 
@@ -1792,5 +1812,11 @@ CELULARES MUY PEQUEÑOS (MENOS DE 480px)
   .btn{
     width: 90%;
     font-size: 12px;
+  }
+
+  .divisor1 {
+    padding: 30px;
+    background-size: cover; /* mantiene calidad */
+    background-position: center;
   }
 }
